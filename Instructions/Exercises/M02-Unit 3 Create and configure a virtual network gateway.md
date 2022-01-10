@@ -34,7 +34,7 @@ Exercise:
    ```powershell
    $RGName = "ContosoResourceGroup"
    #create resource group if it doesnt exist
-   New-AzResourceGroup -Name $RGName -Location East US
+   New-AzResourceGroup -Name $RGName -Location EastUS
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
 
