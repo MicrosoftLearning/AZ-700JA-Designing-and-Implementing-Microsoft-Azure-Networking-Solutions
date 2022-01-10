@@ -70,7 +70,7 @@ Exercise:
 
 5. RDP ファイルをデスクトップに保存します。
 
-6. RDP ファイル、ユーザー名 **TestUser**、パスワード **TestPa$w0rd!** を使用して、ManufacturingVM に接続します。
+6. RDP ファイル、ユーザー名 **TestUser**、パスワード **TestPa$$w0rd!** を使用して、ManufacturingVM に接続します。
 
 7. Azure portal のホーム ページで、「**仮想マシン**」を選択します。
 
@@ -82,7 +82,7 @@ Exercise:
 
 11. RDP ファイルをデスクトップに保存します。
 
-12. RDP ファイル、ユーザー名 **TestUser**、パスワード **TestPa$w0rd!** を使用して、TestVM1 に接続します。
+12. RDP ファイル、ユーザー名 **TestUser**、パスワード **TestPa$$w0rd!** を使用して、TestVM1 に接続します。
 
 13. 両方の VM で、「**デバイスのプライバシー設定の選択**」で「**同意**」を選択します。
 
