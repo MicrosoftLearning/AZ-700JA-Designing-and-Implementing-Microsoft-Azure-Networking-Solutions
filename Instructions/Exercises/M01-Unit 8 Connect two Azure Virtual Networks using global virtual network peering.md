@@ -78,7 +78,7 @@ Exercise:
 
 9. TestVM1 で、**「接続」 &gt; 「RDP」** を選択します。
 
-10. TestVM1 の | 「接続」で、「**RDP ファイルのダウンロード**」を選択します。
+10. TestVM1  | 「接続」で、「**RDP ファイルのダウンロード**」を選択します。
 
 11. RDP ファイルをデスクトップに保存します。
 
@@ -117,7 +117,7 @@ Exercise:
 2. CoreServicesVnet の「**設定**」で、「**ピアリング**」を選択します。
    ![VNet ピアリング設定を表示するコア サービスのスクリーンショット ](../media/create-peering-on-coreservicesvnet.png)
 
-3. CoreServicesVnet の | 「ピアリング」で、「**+ 追加**」を選択します。
+3. CoreServicesVnet  | 「ピアリング」で、「**+ 追加**」を選択します。
 
 4. 次の表の情報を使用して、ピアリングを作成します。
 
