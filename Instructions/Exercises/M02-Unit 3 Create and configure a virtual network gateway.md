@@ -40,7 +40,7 @@ Exercise:
 
 ## タスク 2: CoreServicesTestVM を作成する
 
-1. Azure portal の「ホーム」ページで、グローバル検索を使用して、「**Virtual Networks**」と入力し、サービスの下で、仮想ネットワークを選択します。
+1. Azure portal の「ホーム」ページで、グローバル検索を使用して、「**Virtual Machines**」と入力し、サービスの下で、仮想マシンを選択します。
 
 2. 仮想マシンで、**「+ 作成」、「+ 仮想マシン」** を選択します。
 
