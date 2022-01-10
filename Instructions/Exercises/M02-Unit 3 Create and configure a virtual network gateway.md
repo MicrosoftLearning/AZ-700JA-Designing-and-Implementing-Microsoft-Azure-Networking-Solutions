@@ -117,13 +117,13 @@ Exercise:
 3. 「**ManufacturingTestVM**」で、**「接続」 &gt; 「RDP」** を選択します。
 4. 「**ManufacturingTestVM**」の **|** 「**接続**」で、「**RDP ファイルのダウンロード**」を選択します。
 5. RDP ファイルをデスクトップに保存します。
-6. RDP ファイル、ユーザー名 **TestUser**、パスワード **TestPa$w0rd!** を使用して、ManufacturingTestVM に接続します。
+6. RDP ファイル、ユーザー名 **TestUser**、パスワード **TestPa$$w0rd!** を使用して、ManufacturingTestVM に接続します。
 7. Azure portal のホーム ページで、「**仮想マシン**」を選択します。
 8. 「**CoreServicesTestVM**」を選択します。
 9. 「**CoreServicesTestVM**」で、**「接続」 &gt; 「RDP」** を選択します。
 10. 「**CoreServicesTestVM**」の **|** 「**接続**」で、「**RDP ファイルのダウンロード**」を選択します。
 11. RDP ファイルをデスクトップに保存します。
-12. RDP ファイル、ユーザー名 **TestUser**、パスワード **TestPa$w0rd!** を使用して、CoreServicesTestVM に接続します。
+12. RDP ファイル、ユーザー名 **TestUser**、パスワード **TestPa$$w0rd!** を使用して、CoreServicesTestVM に接続します。
 13. 両方の VM で、「**デバイスのプライバシー設定の選択**」で「**同意**」を選択します。
 14. 両方の VM の「**ネットワーク**」で、「**はい**」を選択します。
 15. CoreServicesTestVM で、PowerShell プロンプトを開き、次のコマンド: ipconfig を実行します
