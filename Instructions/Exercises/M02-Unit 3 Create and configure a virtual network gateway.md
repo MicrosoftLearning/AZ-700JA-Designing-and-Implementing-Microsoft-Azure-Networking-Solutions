@@ -161,7 +161,7 @@ Exercise:
    | 基本          | プロジェクトの詳細   | サブスクリプション                                | 変更は必要ありません          |
    |                 |                   | リソース グループ                               | ContosoResourceGroup         |
    |                 | インスタンスの詳細  | 名前                                        | CoreServicesVnetGateway      |
-   |                 |                   | リージョン                                      | 米国東部                      |
+   |                 |                   | リージョン                                      | 米国西部                      |
    |                 |                   | ゲートウェイの種類                                | VPN                          |
    |                 |                   | VPN の種類                                    | ルート ベース                  |
    |                 |                   | SKU                                         | VpnGw1                       |
@@ -192,7 +192,7 @@ Exercise:
    | 基本          | プロジェクトの詳細   | サブスクリプション                                | 変更は必要ありません          |
    |                 |                   | リソース グループ                               | ContosoResourceGroup         |
    |                 | インスタンスの詳細  | 名前                                        | ManufacturingVnetGateway     |
-   |                 |                   | リージョン                                      | 西ヨーロッパ                  |
+   |                 |                   | リージョン                                      | 北ヨーロッパ                  |
    |                 |                   | ゲートウェイの種類                                | VPN                          |
    |                 |                   | VPN の種類                                    | ルート ベース                  |
    |                 |                   | SKU                                         | VpnGw1                       |
