@@ -75,7 +75,7 @@ Exercise:
 
    ![仮想ネットワーク接続が強調表示された仮想 WAN 構成ページ。](../media/connect-vnet-to-virtual-hub.png)
 
-3. ContosoVirtualWAN の | 「仮想ネットワーク接続」で、「**+ 接続の追加**」を選択します。
+3. 「ContosoVirtualWAN  | 仮想ネットワーク接続」　で、「**+ 接続の追加**」を選択します。
 
 4. 「接続の追加」で、次の情報を使用して接続を作成します。
 
