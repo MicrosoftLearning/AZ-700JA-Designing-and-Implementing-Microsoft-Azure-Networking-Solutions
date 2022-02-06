@@ -34,13 +34,13 @@ Exercise:
    ```powershell
    $RGName = "ContosoResourceGroup"
    #create resource group if it doesnt exist
-   New-AzResourceGroup -Name $RGName -Location East US
+   New-AzResourceGroup -Name $RGName -Location EastUS
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
 
 ## タスク 2: CoreServicesTestVM を作成する
 
-1. Azure portal の「ホーム」ページで、グローバル検索を使用して、「**Virtual Networks**」と入力し、サービスの下で、仮想ネットワークを選択します。
+1. Azure portal の「ホーム」ページで、グローバル検索を使用して、「**Virtual Machine**」と入力し、サービスの下で、Virtual Machine を選択します。
 
 2. 仮想マシンで、**「+ 作成」、「+ 仮想マシン」** を選択します。
 
@@ -97,7 +97,7 @@ Exercise:
    |                 | 受信ポートの選択                                         | RDP (3389)                                |
    | ディスク           | 変更は必要ありません                                          |                                           |
    | ネットワーキング      | 仮想ネットワーク                                              | ManufacturingVnet                         |
-   |                 | サブネット                                                       | ManufacturingSystemSubnet (10.40.40.0/24) |
+   |                 | サブネット                                                       | ManufacturingSystemSubnet (10.30.10.0/24) |
    |                 | パブリック IP                                                    | (新しい) ManufacturingTestVM-ip              |
    |                 | NIC ネットワーク セキュリティ グループ                                   | Basic                                     |
    |                 | パブリック受信ポート                                         | 選択したポートを許可する                      |
