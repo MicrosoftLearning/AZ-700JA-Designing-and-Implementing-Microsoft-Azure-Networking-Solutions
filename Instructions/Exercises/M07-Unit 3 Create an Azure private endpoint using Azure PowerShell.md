@@ -83,17 +83,11 @@ $bastsubnetConfig = New-AzVirtualNetworkSubnetConfig -Name AzureBastionSubnet -A
 ## Create the virtual network. ##
 
 $parameters1 = @{
-
  Name = 'MyVNet'
-
  ResourceGroupName = 'CreatePrivateEndpointQS-rg'
-
  Location = 'eastus'
-
  AddressPrefix = '10.0.0.0/16'
-
  Subnet = $subnetConfig, $bastsubnetConfig
-
 }
 
 $vnet = New-AzVirtualNetwork @parameters1
@@ -101,17 +95,11 @@ $vnet = New-AzVirtualNetwork @parameters1
 ## Create public IP address for bastion host. ##
 
 $parameters2 = @{
-
  Name = 'myBastionIP'
-
  ResourceGroupName = 'CreatePrivateEndpointQS-rg'
-
  Location = 'eastus'
-
  Sku = 'Standard'
-
  AllocationMethod = 'Static'
-
 }
 
 $publicip = New-AzPublicIpAddress @parameters2
@@ -119,15 +107,10 @@ $publicip = New-AzPublicIpAddress @parameters2
 ## Create bastion host ##
 
 $parameters3 = @{
-
  ResourceGroupName = 'CreatePrivateEndpointQS-rg'
-
  Name = 'myBastion'
-
  PublicIpAddress = $publicip
-
  VirtualNetwork = $vnet
-
 }
 
 New-AzBastion @parameters3
@@ -168,15 +151,10 @@ $vnet = Get-AzVirtualNetwork -Name myVNet -ResourceGroupName CreatePrivateEndpoi
 ## Command to create network interface for VM ##
 
 $parameters1 = @{
-
  Name = 'myNicVM'
-
  ResourceGroupName = 'CreatePrivateEndpointQS-rg'
-
  Location = 'eastus'
-
  Subnet = $vnet.Subnets[0]
-
 }
 
 $nicVM = New-AzNetworkInterface @parameters1
@@ -184,31 +162,20 @@ $nicVM = New-AzNetworkInterface @parameters1
 ## Create a virtual machine configuration.##
 
 $parameters2 = @{
-
  VMName = 'myVM'
-
  VMSize = 'Standard_DS1_v2'
-
 }
 
 $parameters3 = @{
-
  ComputerName = 'myVM'
-
  Credential = $cred
-
 }
 
 $parameters4 = @{
-
  PublisherName = 'MicrosoftWindowsServer'
-
  Offer = 'WindowsServer'
-
  Skus = '2019-Datacenter'
-
  Version = 'latest'
-
 }
 
 $vmConfig = New-AzVMConfig @parameters2 | Set-AzVMOperatingSystem -Windows @parameters3 | Set-AzVMSourceImage @parameters4 | Add-AzVMNetworkInterface -Id $nicVM.Id
@@ -249,13 +216,9 @@ $webapp = Get-AzWebApp -ResourceGroupName <webapp-resource-group-name> -Name <yo
 ## Create Private Endpoint connection. ##
 
 $parameters1 = @{
-
  Name = 'myConnection'
-
  PrivateLinkServiceId = $webapp.ID
-
  GroupID = 'sites'
-
 }
 
 $privateEndpointConnection = New-AzPrivateLinkServiceConnection @parameters1
@@ -273,17 +236,11 @@ $vnet | Set-AzVirtualNetwork
 ## Create private endpoint
 
 $parameters2 = @{
-
  ResourceGroupName = 'CreatePrivateEndpointQS-rg'
-
  Name = 'myPrivateEndpoint'
-
  Location = 'eastus'
-
  Subnet = $vnet.Subnets[0]
-
  PrivateLinkServiceConnection = $privateEndpointConnection
-
 }
 
 New-AzPrivateEndpoint @parameters2 
@@ -312,11 +269,8 @@ $vnet = Get-AzVirtualNetwork -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Na
 ## Create private dns zone. ##
 
 $parameters1 = @{
-
  ResourceGroupName = 'CreatePrivateEndpointQS-rg'
-
  Name = 'privatelink.azurewebsites.net'
-
 }
 
 $zone = New-AzPrivateDnsZone @parameters1
@@ -324,15 +278,10 @@ $zone = New-AzPrivateDnsZone @parameters1
 ## Create dns network link. ##
 
 $parameters2 = @{
-
  ResourceGroupName = 'CreatePrivateEndpointQS-rg'
-
  ZoneName = 'privatelink.azurewebsites.net'
-
  Name = 'myLink'
-
  VirtualNetworkId = $vnet.Id
-
 }
 
 $link = New-AzPrivateDnsVirtualNetworkLink @parameters2
@@ -340,11 +289,8 @@ $link = New-AzPrivateDnsVirtualNetworkLink @parameters2
 ## Create DNS configuration ##
 
 $parameters3 = @{
-
  Name = 'privatelink.azurewebsites.net'
-
  PrivateDnsZoneId = $zone.ResourceId
-
 }
 
 $config = New-AzPrivateDnsZoneConfig @parameters3
@@ -352,15 +298,10 @@ $config = New-AzPrivateDnsZoneConfig @parameters3
 ## Create DNS zone group. ##
 
 $parameters4 = @{
-
  ResourceGroupName = 'CreatePrivateEndpointQS-rg'
-
  PrivateEndpointName = 'myPrivateEndpoint'
-
  Name = 'myZoneGroup'
-
  PrivateDnsZoneConfig = $config
-
 }
 
 New-AzPrivateDnsZoneGroup @parameters4 
