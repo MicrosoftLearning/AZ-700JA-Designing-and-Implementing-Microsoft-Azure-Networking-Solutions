@@ -48,11 +48,13 @@ Azure リソース グループとは、Azure リソースのデプロイと管�
 New-AzResourceGroup -Name 'CreatePrivateEndpointQS-rg' -Location 'eastus'
 ```
 次の ARM テンプレートをデプロイして、この演習に必要な PremiumV2 層の Azure Web アプリを作成します。
+ 
+<webapp 名> には、webapp<ランダムな数字> などを使用して、唯一の名称を指定してください。この名前は後で使用するので、忘れないようにメモしておいてください。
 
    ```powershell
    $RGName = "CreatePrivateEndpointQS-rg"
    
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile template.json -TemplateParameterFile parameters.json
+   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile template.json -TemplateParameterFile parameters.json -webappname <webapp 名>
    ```
 
 ## タスク 2: 仮想ネットワークと bastion ホストの作成
@@ -207,11 +209,9 @@ Azure でのアウトバウンド接続の詳細については、アウトバ�
  
 
 ```Azure PowerShell
-## Place web app into variable. Replace <webapp-resource-group-name> with the resource group of your webapp. ##
-
 ## Replace <your-webapp-name> with your webapp name ##
 
-$webapp = Get-AzWebApp -ResourceGroupName <webapp-resource-group-name> -Name <your-webapp-name>
+$webapp = Get-AzWebApp -ResourceGroupName CreatePrivateEndpointQS-rg -Name <your-webapp-name>
 
 ## Create Private Endpoint connection. ##
 
