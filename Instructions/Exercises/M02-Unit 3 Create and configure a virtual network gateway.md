@@ -34,7 +34,7 @@ Exercise:
    ```powershell
    $RGName = "ContosoResourceGroup"
    #create resource group if it doesnt exist
-   New-AzResourceGroup -Name $RGName -Location East US
+   New-AzResourceGroup -Name $RGName -Location EastUS
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
 
@@ -76,7 +76,7 @@ Exercise:
 
 ## タスク 3: ManufacturingTestVM を作成する
 
-1. Azure portal の「ホーム」ページで、グローバル検索を使用して、「**Virtual Networks**」と入力し、サービスの下で、仮想ネットワークを選択します。
+1. Azure portal の「ホーム」ページで、グローバル検索を使用して、「**Virtual Machines**」と入力し、サービスの下で、Virtual Machinesを選択します。
 
 2. 仮想マシンで、**「+ 作成」、「+ 仮想マシン」** を選択します。
 
@@ -86,7 +86,7 @@ Exercise:
    | --------------- | ------------------------------------------------------------ | ----------------------------------------- |
    | 基本          | リソース グループ                                               | ContosoResourceGroup                      |
    |                 | 仮想マシン名                                         | ManufacturingTestVM                       |
-   |                 | リージョン                                                       | 西ヨーロッパ                               |
+   |                 | リージョン                                                       | 東日本                              |
    |                 | 可用性オプション                                         | インフラストラクチャの冗長性は必要ありません     |
    |                 | イメージ                                                        | Windows Server 2022 Datacenter- Gen1      |
    |                 | Azure Spot インスタンス                                          | 非選択                              |
@@ -192,7 +192,7 @@ Exercise:
    | 基本          | プロジェクトの詳細   | サブスクリプション                                | 変更は必要ありません          |
    |                 |                   | リソース グループ                               | ContosoResourceGroup         |
    |                 | インスタンスの詳細  | 名前                                        | ManufacturingVnetGateway     |
-   |                 |                   | リージョン                                      | 西ヨーロッパ                  |
+   |                 |                   | リージョン                                      | 東日本                  |
    |                 |                   | ゲートウェイの種類                                | VPN                          |
    |                 |                   | VPN の種類                                    | ルート ベース                  |
    |                 |                   | SKU                                         | VpnGw1                       |
